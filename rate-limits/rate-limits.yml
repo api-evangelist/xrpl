@@ -1,0 +1,21 @@
+rateLimits:
+  - name: rippled Public API Rate Limiting
+    description: The rippled server implements IP-based rate limiting for all public (non-admin) API connections. Requests are weighted by computational cost — expensive operations such as path_find and subscribe follow-up messages count more against the limit than simple queries like ping. Rate limiting does not apply to admin connections.
+    url: https://xrpl.org/docs/references/http-websocket-apis/api-conventions/rate-limiting
+    scope: IP address (shared across NAT)
+    headers:
+      - name: warning
+        description: Value "load" added to API responses when the client is approaching rate limits. Appears intermittently as a signal before disconnection.
+    enforcement:
+      websocket:
+        closeCode: 1008
+        closeMessage: "threshold exceeded"
+      jsonRpc:
+        httpStatus: 503
+        body: "Server is overloaded"
+    notes:
+      - Rate usage drops off exponentially over time; an idle client can regain access within seconds to minutes.
+      - Clients sharing a public IP via NAT share the same rate limit bucket.
+      - Computationally expensive methods (path_find, ripple_path_find, subscribe follow-ups) consume more of the rate budget than lightweight methods (ping, fee, server_info).
+      - Rate limiting is applied at the individual rippled node level; different public servers may have different thresholds.
+      - No published fixed numeric limit (requests per second or per minute); the server uses an adaptive load-based algorithm.

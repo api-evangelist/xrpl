@@ -1,0 +1,28 @@
+plans:
+  - name: Public Free Tier (Community Servers)
+    description: Free, unauthenticated access to XRP Ledger public servers run by the community (InFTF/xrplcluster, Honeycluster, Ripple). Suitable for development, testing, and low-volume production use. No API key required.
+    url: https://xrpl.org/docs/tutorials/public-servers
+    price: 0.00
+    currency: USD
+    unit: month
+    rateLimits:
+      - type: requests
+        notes: Rate limited per IP by rippled load-balancing heuristics. Requests with higher computational cost count more against the limit. Clients receive a warning field before being disconnected.
+    features:
+      - Access to all public JSON-RPC methods
+      - Access to all public WebSocket methods including subscriptions
+      - Mainnet, Testnet, and Devnet servers available
+      - No registration or API key required
+      - Community-operated nodes with no SLA guarantees
+  - name: Commercial / Self-Hosted
+    description: Run your own rippled or Clio node for guaranteed throughput and admin-level access. Admin connections bypass all rate limits. Cloud providers such as QuickNode also offer managed XRPL node plans with SLAs.
+    url: https://xrpl.org/docs/infrastructure/installation/
+    price: null
+    currency: USD
+    unit: month
+    features:
+      - No rate limits on admin connections
+      - Full admin API method access (sign, sign_for, channel_authorize, etc.)
+      - Custom configuration and network selection
+      - Available via QuickNode managed hosting (pricing at quicknode.com)
+      - Dhali commercial cluster available at https://xrplcluster.dhali.io/

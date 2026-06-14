@@ -1,0 +1,30 @@
+finops:
+  - name: XRPL API Cost Model
+    description: The XRP Ledger public API is free to use with no direct monetary cost for API calls. The primary cost model is on-chain transaction fees paid in XRP (called drops, where 1 XRP = 1,000,000 drops). Read-only queries (account_info, ledger, tx, etc.) have zero fee. Write operations submitted via the submit method require an on-chain transaction fee.
+    url: https://xrpl.org/docs/concepts/transactions/fees
+    costs:
+      - type: API Access
+        amount: 0.00
+        currency: USD
+        notes: All read-only JSON-RPC and WebSocket API calls to public community servers are free with no registration required.
+      - type: Transaction Fee (Base)
+        amount: 0.000012
+        currency: XRP
+        notes: Minimum base transaction fee (12 drops) required for any transaction submitted to the ledger via the submit method. Actual fee varies with network load (fee escalation). Fees are burned, not paid to any entity.
+      - type: Account Reserve
+        amount: 10
+        currency: XRP
+        notes: Each account must hold a minimum reserve of 10 XRP (base reserve) that cannot be spent. Owner reserves of 2 XRP apply per object (trust lines, offers, escrows, etc.) held in the ledger.
+      - type: Self-Hosted Node
+        amount: null
+        currency: USD
+        notes: Infrastructure cost to run your own rippled or Clio node. Ripple publishes recommended hardware specs (minimum 8 CPU cores, 64 GB RAM, 4 TB NVMe SSD for full-history). Cloud costs vary by provider.
+      - type: QuickNode Managed Node
+        amount: null
+        currency: USD
+        notes: QuickNode offers managed XRPL nodes on both mainnet and testnet. Pricing available at https://www.quicknode.com/chains/xrpl
+    notes:
+      - XRP transaction fees are burned (removed from circulation), not collected by a centralized party.
+      - Fee amounts escalate under high network load; the fee method returns the current minimum fee.
+      - NFT minting and AMM operations may require additional on-chain fees or deposits.
+      - Testnet XRP has no monetary value and is freely available via the faucet at https://faucet.altnet.rippletest.net/accounts

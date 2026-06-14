@@ -1,0 +1,135 @@
+name: XRP Ledger
+description: The XRP Ledger (XRPL) is a decentralized, public blockchain with fast settlement and low transaction costs. It provides HTTP/WebSocket JSON-RPC APIs for querying accounts, transactions, ledgers, order books, payment channels, and network statistics. Developers can connect to community-run public servers on mainnet, testnet, and devnet without authentication for most operations.
+image: https://xrpl.org/img/xrp-ledger-logo.svg
+url: https://xrpl.org/
+tags:
+  - Blockchain
+  - XRP
+  - Cryptocurrency
+  - DeFi
+  - Ledger
+  - Web3
+created: "2026-06-14"
+modified: "2026-06-14"
+specificationVersion: "0.19"
+apis:
+  - name: XRPL JSON-RPC API (Mainnet)
+    description: JSON-RPC interface to the XRP Ledger mainnet for querying accounts, transactions, ledgers, order books, AMM pools, NFTs, and server info. Served by community-run public rippled and Clio nodes.
+    image: https://xrpl.org/img/xrp-ledger-logo.svg
+    humanURL: https://xrpl.org/docs/references/http-websocket-apis/
+    baseURL: https://xrplcluster.com/
+    tags:
+      - JSON-RPC
+      - Mainnet
+      - Accounts
+      - Transactions
+      - Ledger
+    properties:
+      - type: Documentation
+        url: https://xrpl.org/docs/references/http-websocket-apis/
+      - type: PublicServers
+        url: https://xrpl.org/docs/tutorials/public-servers
+      - type: RateLimiting
+        url: /rate-limits/rate-limits.yml
+      - type: Plans
+        url: /plans/plans.yml
+      - type: FinOps
+        url: /finops/finops.yml
+    contact:
+      - FN: XRPL Community
+        url: https://xrpl.org/community
+    meta:
+      - key: methods
+        value: account_info, account_channels, account_currencies, account_lines, account_nfts, account_objects, account_offers, account_tx, gateway_balances, noripple_check, ledger, ledger_closed, ledger_current, ledger_data, ledger_entry, submit, submit_multisigned, transaction_entry, tx, amm_info, book_offers, deposit_authorized, nft_buy_offers, nft_sell_offers, path_find, ripple_path_find, channel_verify, subscribe, unsubscribe, fee, feature, server_info, server_state, server_definitions, manifest, ping, random, vault_info
+  - name: XRPL WebSocket API (Mainnet)
+    description: WebSocket interface to the XRP Ledger mainnet supporting all JSON-RPC methods plus real-time subscriptions for ledger closes, transactions, account activity, order book updates, and payment path finding. Clients maintain a persistent connection for push notifications.
+    image: https://xrpl.org/img/xrp-ledger-logo.svg
+    humanURL: https://xrpl.org/docs/references/http-websocket-apis/
+    baseURL: wss://xrplcluster.com/
+    tags:
+      - WebSocket
+      - Mainnet
+      - Subscriptions
+      - Real-time
+      - Streaming
+    properties:
+      - type: Documentation
+        url: https://xrpl.org/docs/references/http-websocket-apis/
+      - type: PublicServers
+        url: https://xrpl.org/docs/tutorials/public-servers
+      - type: RateLimiting
+        url: /rate-limits/rate-limits.yml
+    contact:
+      - FN: XRPL Community
+        url: https://xrpl.org/community
+    meta:
+      - key: subscriptions
+        value: ledger, transactions, transactions_proposed, accounts, accounts_proposed, order_book, peer_status, consensus
+  - name: XRPL JSON-RPC API (Testnet)
+    description: JSON-RPC interface to the XRP Ledger Altnet testnet for development and testing. Supports the same method set as mainnet. Testnet XRP has no monetary value and can be obtained via the XRPL faucet.
+    image: https://xrpl.org/img/xrp-ledger-logo.svg
+    humanURL: https://xrpl.org/docs/references/http-websocket-apis/
+    baseURL: https://s.altnet.rippletest.net:51234/
+    tags:
+      - JSON-RPC
+      - Testnet
+      - Development
+      - Testing
+    properties:
+      - type: Documentation
+        url: https://xrpl.org/docs/references/http-websocket-apis/
+      - type: Faucet
+        url: https://faucet.altnet.rippletest.net/accounts
+    contact:
+      - FN: Ripple
+        url: https://ripple.com
+  - name: XRPL WebSocket API (Testnet)
+    description: WebSocket interface to the XRP Ledger Altnet testnet for development and testing. Supports real-time subscriptions identical to mainnet WebSocket API.
+    image: https://xrpl.org/img/xrp-ledger-logo.svg
+    humanURL: https://xrpl.org/docs/references/http-websocket-apis/
+    baseURL: wss://s.altnet.rippletest.net:51233/
+    tags:
+      - WebSocket
+      - Testnet
+      - Development
+      - Testing
+    properties:
+      - type: Documentation
+        url: https://xrpl.org/docs/references/http-websocket-apis/
+      - type: Faucet
+        url: https://faucet.altnet.rippletest.net/accounts
+    contact:
+      - FN: Ripple
+        url: https://ripple.com
+common:
+  - type: GitHubOrganization
+    url: https://github.com/XRPLF
+  - type: GitHubRepository
+    url: https://github.com/XRPLF/rippled
+  - type: Documentation
+    url: https://xrpl.org/docs/
+  - type: GettingStarted
+    url: https://xrpl.org/docs/tutorials/get-started/
+  - type: ChangeLog
+    url: https://xrpl.org/blog/
+  - type: Blog
+    url: https://xrpl.org/blog/
+  - type: Community
+    url: https://xrpl.org/community
+  - type: Discord
+    url: https://discord.gg/sfX3ERAMjH
+  - type: PrivacyPolicy
+    url: https://ripple.com/privacy-policy/
+  - type: TermsOfService
+    url: https://ripple.com/terms-of-use/
+  - type: StatusPage
+    url: https://livenet.xrpl.org/
+  - type: Explorer
+    url: https://livenet.xrpl.org/
+  - type: Faucet
+    url: https://faucet.altnet.rippletest.net/accounts
+  - type: SDKs
+    url: https://xrpl.org/docs/references/client-libraries
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
