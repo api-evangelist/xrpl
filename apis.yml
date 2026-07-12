@@ -102,6 +102,8 @@ apis:
       - FN: Ripple
         url: https://ripple.com
 common:
+  - type: DomainSecurity
+    url: security/xrpl-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/XRPLF
   - type: GitHubRepository
