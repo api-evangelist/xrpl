@@ -3,12 +3,12 @@
   "feeds": [
     {
       "source": "https://xrpl.org/blog/",
-      "feed_url": "",
+      "feed_url": "https://xrpl.org/blog/",
+      "title": "",
       "saved": 0,
-      "method": "agent-scrape"
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T13:22:41Z",
-  "post_count": 1,
-  "agent_pulled": "2026-06-27"
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 1
 }
