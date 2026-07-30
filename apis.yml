@@ -1,5 +1,17 @@
 name: XRP Ledger
 description: The XRP Ledger (XRPL) is a decentralized, public blockchain with fast settlement and low transaction costs. It provides HTTP/WebSocket JSON-RPC APIs for querying accounts, transactions, ledgers, order books, payment channels, and network statistics. Developers can connect to community-run public servers on mainnet, testnet, and devnet without authentication for most operations.
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://xrpl.org/img/xrp-ledger-logo.svg
 url: https://xrpl.org/
 tags:
