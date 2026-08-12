@@ -114,6 +114,9 @@ apis:
       - FN: Ripple
         url: https://ripple.com
 common:
+  - type: License
+    name: ISC
+    url: https://github.com/XRPLF/rippled/blob/develop/LICENSE
   - type: DomainSecurity
     url: security/xrpl-domain-security.yml
   - type: GitHubOrganization
