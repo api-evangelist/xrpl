@@ -23,7 +23,7 @@ tags:
   - Web3
 created: "2026-06-14"
 modified: "2026-06-14"
-specificationVersion: "0.19"
+specificationVersion: '0.23'
 apis:
   - name: XRPL JSON-RPC API (Mainnet)
     description: JSON-RPC interface to the XRP Ledger mainnet for querying accounts, transactions, ledgers, order books, AMM pools, NFTs, and server info. Served by community-run public rippled and Clio nodes.
