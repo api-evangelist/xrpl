@@ -33,6 +33,12 @@ apis:
     tags:
       - JSON-RPC
       - Mainnet
+      - Account
+      - Transaction
+      - Ledger
+    tags_raw:
+      - JSON-RPC
+      - Mainnet
       - Accounts
       - Transactions
       - Ledger
@@ -59,6 +65,12 @@ apis:
     humanURL: https://xrpl.org/docs/references/http-websocket-apis/
     baseURL: wss://xrplcluster.com/
     tags:
+      - WebSocket
+      - Mainnet
+      - Subscription
+      - Real-Time
+      - Streaming
+    tags_raw:
       - WebSocket
       - Mainnet
       - Subscriptions
