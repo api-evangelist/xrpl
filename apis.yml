@@ -1,5 +1,18 @@
 name: XRP Ledger
 description: The XRP Ledger (XRPL) is a decentralized, public blockchain with fast settlement and low transaction costs. It provides HTTP/WebSocket JSON-RPC APIs for querying accounts, transactions, ledgers, order books, payment channels, and network statistics. Developers can connect to community-run public servers on mainnet, testnet, and devnet without authentication for most operations.
+deliveryModel:
+  model: open-core
+  license: ISC
+  open_source: true
+  commercial: true
+  callable_host: false
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -126,6 +139,14 @@ apis:
       - FN: Ripple
         url: https://ripple.com
 common:
+  - type: IssueTracker
+    url: https://github.com/XRPLF/rippled/issues
+  - type: Releases
+    url: https://github.com/XRPLF/rippled/releases
+  - type: SecurityPolicy
+    url: https://github.com/XRPLF/rippled/blob/develop/SECURITY.md
+  - type: ContributionGuide
+    url: https://github.com/XRPLF/rippled/blob/develop/CONTRIBUTING.md
   - type: License
     name: ISC
     url: https://github.com/XRPLF/rippled/blob/develop/LICENSE
