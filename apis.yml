@@ -139,6 +139,8 @@ apis:
       - FN: Ripple
         url: https://ripple.com
 common:
+  - type: Website
+    url: https://www.xrpl.org/
   - type: IssueTracker
     url: https://github.com/XRPLF/rippled/issues
   - type: Releases
