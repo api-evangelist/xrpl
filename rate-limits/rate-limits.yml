@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 rateLimits:
   - name: rippled Public API Rate Limiting
     description: The rippled server implements IP-based rate limiting for all public (non-admin) API connections. Requests are weighted by computational cost — expensive operations such as path_find and subscribe follow-up messages count more against the limit than simple queries like ping. Rate limiting does not apply to admin connections.

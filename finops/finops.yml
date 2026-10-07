@@ -1,3 +1,11 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+# Coverage demoted 2026-10-07 (roadmap#942, PLAN.md Stage A): this file was written by an API Evangelist
+# sweep and names no billing unit, meters or pricing category read from the provider — it restates the
+# FinOps framework. It is `x-coverage: unmeasured`, and the FOCUS alignment it claimed has been removed.
+x-coverage: unmeasured
+method: generated
 finops:
   - name: XRPL API Cost Model
     description: The XRP Ledger public API is free to use with no direct monetary cost for API calls. The primary cost model is on-chain transaction fees paid in XRP (called drops, where 1 XRP = 1,000,000 drops). Read-only queries (account_info, ledger, tx, etc.) have zero fee. Write operations submitted via the submit method require an on-chain transaction fee.
