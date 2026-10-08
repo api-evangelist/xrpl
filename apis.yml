@@ -139,6 +139,12 @@ apis:
       - FN: Ripple
         url: https://ripple.com
 common:
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+  - type: FinOps
+    url: finops/finops.yml
   - type: Website
     url: https://www.xrpl.org/
   - type: IssueTracker
