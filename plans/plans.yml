@@ -30,3 +30,25 @@ plans:
       - Custom configuration and network selection
       - Available via QuickNode managed hosting (pricing at quicknode.com)
       - Dhali commercial cluster available at https://xrplcluster.dhali.io/
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units:
+  - period
+  plans:
+  - name: Public Free Tier (Community Servers)
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Commercial / Self-Hosted
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - period
+    periods: []
